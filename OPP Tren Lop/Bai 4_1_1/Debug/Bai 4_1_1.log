@@ -1,0 +1,13 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Bai 4_1_1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Source.cpp
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(78,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(94,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(121,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(130,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(131,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(140,1): error C2059: syntax error: '}'
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(140,1): error C2143: syntax error: missing ';' before '}'
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(143,36): error C2143: syntax error: missing ';' before '{'
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(143,36): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(180,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Bai 4_1_1\Source.cpp(224,20): warning C4018: '<': signed/unsigned mismatch

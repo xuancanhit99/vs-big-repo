@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\daota\source\repos\OPP Tren Lop\Lab 1\Source.cpp(52,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Lab 1\Source.cpp(84,21): warning C4018: '<': signed/unsigned mismatch
+  Lab 1.vcxproj -> C:\Users\daota\source\repos\OPP Tren Lop\Debug\Lab 1.exe

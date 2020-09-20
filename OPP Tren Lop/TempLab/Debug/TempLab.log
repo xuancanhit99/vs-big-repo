@@ -1,0 +1,10 @@
+﻿  Application_N4.cpp
+C:\Users\daota\source\repos\OPP Tren Lop\TempLab\Application_N4.cpp(4,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\TempLab\Application_N4.cpp(17,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\TempLab\Application_N4.cpp(23,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\TempLab\Application_N4.cpp(38,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\TempLab\Application_N4.cpp(47,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\TempLab\Application_N4.cpp(48,21): warning C4018: '<': signed/unsigned mismatch
+  Source.cpp
+  Generating Code...
+  TempLab.vcxproj -> C:\Users\daota\source\repos\OPP Tren Lop\Debug\TempLab.exe

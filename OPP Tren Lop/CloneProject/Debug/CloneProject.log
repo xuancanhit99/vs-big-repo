@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\daota\source\repos\OPP Tren Lop\CloneProject\Source.cpp(49,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\CloneProject\Source.cpp(66,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\CloneProject\Source.cpp(76,54): warning C4018: '<': signed/unsigned mismatch
+  CloneProject.vcxproj -> C:\Users\daota\source\repos\OPP Tren Lop\Debug\CloneProject.exe

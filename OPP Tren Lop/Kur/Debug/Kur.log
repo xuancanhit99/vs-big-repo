@@ -1,0 +1,11 @@
+﻿  Source.cpp
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(113,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(144,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(157,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(163,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(178,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(187,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(188,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\OPP Tren Lop\Kur\Source.cpp(229,20): warning C4018: '<': signed/unsigned mismatch
+  Kur.vcxproj -> C:\Users\daota\source\repos\OPP Tren Lop\Debug\Kur.exe

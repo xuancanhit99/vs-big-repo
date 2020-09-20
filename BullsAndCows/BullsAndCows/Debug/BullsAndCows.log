@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\daota\source\repos\BullsAndCows\BullsAndCows\Source.cpp(21,20): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\daota\source\repos\BullsAndCows\BullsAndCows\Source.cpp(49,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  BullsAndCows.vcxproj -> C:\Users\daota\source\repos\BullsAndCows\Debug\BullsAndCows.exe

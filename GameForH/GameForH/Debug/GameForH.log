@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\daota\source\repos\GameForH\GameForH\Source.cpp(109,28): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\daota\source\repos\GameForH\GameForH\Source.cpp(109,35): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\daota\source\repos\GameForH\GameForH\Source.cpp(222,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GameForH.vcxproj -> C:\Users\daota\source\repos\GameForH\Debug\GameForH.exe

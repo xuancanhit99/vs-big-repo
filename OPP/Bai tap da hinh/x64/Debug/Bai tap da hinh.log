@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Bai tap 2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  NhanVien.cpp
+  Bai tap da hinh.vcxproj -> C:\Users\daota\source\repos\OPP\x64\Debug\Bai tap da hinh.exe

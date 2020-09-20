@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Users\daota\source\repos\Game 2048\Game 2048\Source.cpp(105,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Game 2048.vcxproj -> C:\Users\daota\source\repos\Game 2048\Debug\Game 2048.exe

@@ -1,0 +1,10 @@
+﻿  NhanVien.cpp
+  NVQuanLy.cpp
+  NVSanXuat.cpp
+  NVVanPhong.cpp
+  Source.cpp
+C:\Users\daota\source\repos\OPP\Bai tap 2\Source.cpp(269,10): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\daota\source\repos\OPP\Bai tap 2\Source.cpp(277,10): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\daota\source\repos\OPP\Bai tap 2\Source.cpp(284,10): warning C4553: '==': result of expression not used; did you intend '='?
+  Generating Code...
+  Bai tap 2.vcxproj -> C:\Users\daota\source\repos\OPP\x64\Debug\Bai tap 2.exe

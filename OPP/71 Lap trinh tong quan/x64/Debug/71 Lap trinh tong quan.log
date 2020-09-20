@@ -1,0 +1,17 @@
+﻿  Source.cpp
+C:\Users\daota\source\repos\OPP\71 Lap trinh tong quan\Source.cpp(39,10): warning C4244: 'return': conversion from 'type3' to 'type2', possible loss of data
+          with
+          [
+              type3=int
+          ]
+          and
+          [
+              type2=float
+          ]
+C:\Users\daota\source\repos\OPP\71 Lap trinh tong quan\Source.cpp(63): message : see reference to function template instantiation 'type2 max<float,int>(type2,type3)' being compiled
+          with
+          [
+              type2=float,
+              type3=int
+          ]
+  71 Lap trinh tong quan.vcxproj -> C:\Users\daota\source\repos\OPP\x64\Debug\71 Lap trinh tong quan.exe

@@ -1,0 +1,14 @@
+A888888888
+8888888888
+88Z8888888
+888B888888
+8888Z88888
+88888b8888
+8888888888
+8888888888
+8888888888
+8888888888
+Coordinate is wrong ( 0, 1 )
+Coordinate is wrong ( 0, -1 )
+Coordinate is wrong ( 0, -2 )
+Not a letter of the Latin alphabet : %

@@ -1,3 +1,2 @@
 ﻿  Source.cpp
-C:\Users\daota\source\repos\OPP Tren Lop\Temp\Source.cpp(103,1): error C2084: function 'void Base_N1::SetName(std::string)' already has a body
-C:\Users\daota\source\repos\OPP Tren Lop\Temp\Source.cpp(97): message : see previous definition of 'SetName'
+  Temp.vcxproj -> C:\Users\XuanCanh\source\repos\OPP Tren Lop\Debug\Temp.exe

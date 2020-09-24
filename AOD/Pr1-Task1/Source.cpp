@@ -1,8 +1,6 @@
 ﻿#include <iostream>
 #include <vector>
-
 using namespace std;
-
 
 //1. Установить 7 бит в 1.
 int bit7To1(int x) {
@@ -19,15 +17,13 @@ int reverseBit5(int x) {
 	return x = x ^ (1 << 5);
 }
 
-
 //4. Даны два целых положительных числа Х и Y одной разрядности.
 //Написать выражение, которое вычисляет новое значение Х, где n битов,
 //начиная с позиции р, установлены так, как n самых правых битов в Y, а остальные биты не изменились. 
 
 // преобразовать из int в бит
 void intToBit(int X, vector<int>& vecX) {
-    while (X > 0)
-    {
+    while (X > 0) {
         vecX.push_back(X % 2);
         X /= 2;
     }
@@ -46,8 +42,7 @@ int BitToInt(vector<int> vecX) {
     }
     p = 0;
     int decNumber = 0;
-    while (binaryNumber > 0)
-    {
+    while (binaryNumber > 0) {
         decNumber += (binaryNumber % 10) * pow(2, p);
         ++p;
         binaryNumber /= 10;

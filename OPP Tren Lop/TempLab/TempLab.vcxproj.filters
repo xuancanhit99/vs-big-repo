@@ -21,7 +21,16 @@
     <ClCompile Include="Base_N1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Application_N4.cpp">
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Derived_N4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Derived_N2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Derived_N3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +44,10 @@
     <ClInclude Include="Derived_N3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Application_N4.h">
+    <ClInclude Include="Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Derived_N4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

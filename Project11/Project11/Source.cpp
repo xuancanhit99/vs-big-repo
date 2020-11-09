@@ -64,11 +64,12 @@ int Base_N1::getReady() {
 
 void Base_N1::output() {
 	for (int i = 0; i < listChild.size(); i++) {
-		if (getReady() <= 0) {
+		/*if (getReady() <= 0) {
 			cout << endl << "The object " << listChild[i]->getName() << " is not ready";
 			listChild[i]->output();
-		}
-		else if (listChild[i]->getReady() > 0) {
+		}*/
+		//else 
+		if (listChild[i]->getReady() > 0) {
 			cout << endl << "The object " << listChild[i]->getName() << " is ready";
 			listChild[i]->output();
 		}

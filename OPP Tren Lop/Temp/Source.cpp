@@ -5,198 +5,177 @@
 
 using namespace std;
 
-class Base_N1 {
+class Base_N1
+{
 public:
-	Base_N1(Base_N1* p_parent = 0, string s_object_name = "", int _is_ready = 1);
-	void SetName(string object_name);
-	string GetObjName();
-	void SetParent(Base_N1* p_parent);
-	void AddObj(Base_N1* p_obj);
-	void SetState(int is_ready);
-	void ShowObjState();
-
+	vector<Base_N1*> listChild;
+	Base_N1(string _name, Base_N1* _parent, int _isReady);
+	string getName();
+	void setName(string _name);
+	int getReady();
+	void output();
+	void FindObjAndAddTree(string nameP, string nameD, int _isReady, int numclass);
 	~Base_N1();
 protected:
-	vector<Base_N1*> ListObj;
-	vector<Base_N1*> ::iterator it;
-	string object_name;
-	Base_N1* p_parent;
-	int is_ready;
-	void ShowStateNext(Base_N1* ob_parent);
+	string name;
+	Base_N1* parent;
+	int isReady;
 };
 
-class Application : public Base_N1
+class Application
 {
-
 public:
-	Application(Base_N1* p_parent) {};
-	void CreTree();
-	int AllInOne();
-
+	void runApp();
 	~Application();
 };
+
 
 class Derived_N2 : public Base_N1
 {
 public:
-	Derived_N2(string c_name, int is_ready, map <string, Base_N1*>& parent_object_map);
+	Derived_N2(string _name, Base_N1* _parent, int _isReady) : Base_N1(_name, _parent, _isReady) {}
 };
 
 class Derived_N3 : public Base_N1
 {
 public:
-	Derived_N3(string c_name, int is_ready, map <string, Base_N1*>& parent_object_map);
+	Derived_N3(string _name, Base_N1* _parent, int _isReady) : Base_N1(_name, _parent, _isReady) {}
 };
 
 
 class Derived_N4 : public Base_N1
 {
 public:
-	Derived_N4(string c_name, int is_ready, map <string, Base_N1*>& parent_object_map);
+	Derived_N4(string _name, Base_N1* _parent, int _isReady) : Base_N1(_name, _parent, _isReady) {}
 };
 
 
-Derived_N2::Derived_N2(string c_name, int is_ready, map <string, Base_N1*>& parent_object_map)
+
+Base_N1::Base_N1(string _name, Base_N1* _parent, int _isReady)
 {
-	this->object_name = c_name;
-	parent_object_map.emplace(this->object_name, this);
-	SetState(is_ready);
+	name = _name;
+	parent = _parent;
+	isReady = _isReady;
 }
 
-Derived_N3::Derived_N3(string c_name, int is_ready, map <string, Base_N1*>& parent_object_map)
+string Base_N1::getName()
 {
-	this->object_name = c_name;
-	parent_object_map.emplace(this->object_name, this);
-	SetState(is_ready);
+	return name;
 }
 
-Derived_N4::Derived_N4(string c_name, int is_ready, map <string, Base_N1*>& parent_object_map)
+void Base_N1::setName(string _name)
 {
-	this->object_name = c_name;
-	parent_object_map.emplace(this->object_name, this);
-	SetState(is_ready);
+	name = _name;
 }
 
-
-Base_N1::Base_N1(Base_N1* p_parent, string object_name, int _is_ready)
+int Base_N1::getReady()
 {
-	this->object_name = object_name; if (p_parent)
-	{
-		this->p_parent = p_parent; p_parent->AddObj(this);
-	}
-	else
-	{
-		this->p_parent = 0;
-	}
-	SetState(_is_ready);
+	return isReady;
 }
 
-void Base_N1::SetName(string object_name)
+void Base_N1::output()
 {
-	this->object_name = object_name;
-}
-string Base_N1::GetObjName()
-{
-	return object_name;
-}
-void Base_N1::SetParent(Base_N1* p_parent)
-{
-	if (p_parent)
+	for (int i = 0; i < listChild.size(); i++)
 	{
-		this->p_parent = p_parent;
-		p_parent->ListObj.push_back(this);
-	}
-}
-void Base_N1::AddObj(Base_N1* p_obj)
-{
-	this->ListObj.push_back(p_obj);
-}
-void Base_N1::SetState(int is_ready)
-{
-	this->is_ready = is_ready;
-}
-void Base_N1::ShowObjState()
-{
-	ShowStateNext((Base_N1*)this);
-}
-void Base_N1::ShowStateNext(Base_N1* parent)
-{
-	if (parent->is_ready == 1)
-	{
-		cout << endl << "The object " << parent->GetObjName() << " is ready";
-	}
-	else
-	{
-		cout << endl << "The object " << parent->GetObjName() << " is not ready";
-	}
-	if (parent->ListObj.size() == 0) return;
-	parent->it = parent->ListObj.begin();
-	while (parent->it != parent->ListObj.end())
-	{
-		ShowStateNext((*(parent->it))); parent->it++;
+		if (listChild[i]->getReady() > 0)
+		{
+			cout << endl << "The object " << listChild[i]->getName() << " is ready";
+			listChild[i]->output();
+		}
+		else if (listChild[i]->getReady() <= 0)
+		{
+			cout << endl << "The object " << listChild[i]->getName() << " is not ready";
+			listChild[i]->output();
+		}
 	}
 }
 
 Base_N1::~Base_N1()
 {
-	for (it = ListObj.begin(); it != ListObj.end(); it++)
-	{
-		delete* (it);
-	}
-	ListObj.clear();
+	delete parent;
+	listChild.clear();
 }
 
-void Application::CreTree()
+
+void Base_N1::FindObjAndAddTree(string nameP, string nameD, int _isReady, int numclass) {
+	Derived_N2* der2;
+	Derived_N3* der3;
+	Derived_N4* der4;
+	for (int i = 0; i < listChild.size(); i++) {
+		if (nameP == listChild[i]->getName()) {
+			if (numclass == 2)
+			{
+				der2 = new Derived_N2(nameD, listChild[i], _isReady);
+				listChild[i]->listChild.push_back(der2);
+			}
+			else if (numclass == 3)
+			{
+				der3 = new Derived_N3(nameD, listChild[i], _isReady);
+				listChild[i]->listChild.push_back(der3);
+			}
+			else if (numclass == 4)
+			{
+				der4 = new Derived_N4(nameD, listChild[i], _isReady);
+				listChild[i]->listChild.push_back(der4);
+			}
+		}
+		listChild[i]->FindObjAndAddTree(nameP, nameD, _isReady, numclass);
+	}
+}
+
+void Application::runApp()
 {
-	map<string, Base_N1*> parent_object_map = {};
-	cin >> object_name;
-	string parent_name = this->object_name; string c_name = "";
-	int is_ready = 0; int class_type = 0;
-	cout << "Test result";
-	while (parent_name != "endtree")
+	string nameP, nameD;
+	string r;
+	cin >> r;
+	Base_N1 root(r, 0, 1);
+	Base_N1* gocCay = &root;
+	Derived_N2* der2;
+	Derived_N3* der3;
+	Derived_N4* der4;
+	int _isReady, numclass;
+	while (1)
 	{
-		cin >> parent_name;
-		parent_object_map.emplace(parent_name, this);
-		if (parent_name == "endtree")
-		{
+	in:
+		cin >> nameP;
+		if (nameP == "endtree")
 			break;
+		cin >> nameD >> numclass >> _isReady;
+		if (nameD == nameP) goto in;
+		if (nameP == r) {
+			if (numclass == 2)
+			{
+				der2 = new Derived_N2(nameD, gocCay, _isReady);
+				gocCay->listChild.push_back(der2);
+			}
+			else if (numclass == 3)
+			{
+				der3 = new Derived_N3(nameD, gocCay, _isReady);
+				gocCay->listChild.push_back(der3);
+			}
+			else if (numclass == 4)
+			{
+				der4 = new Derived_N4(nameD, gocCay, _isReady);
+				gocCay->listChild.push_back(der4);
+			}
 		}
-		cin >> c_name >> class_type >> is_ready;
-		if (class_type == 2)
-		{
-			Base_N1* p_ob_2 = new Derived_N2(c_name, is_ready, parent_object_map);
-			p_ob_2->SetParent(parent_object_map.find(parent_name)->second);
-		}
-		if (class_type == 3)
-		{
-			Base_N1* p_ob_3 = new Derived_N3(c_name, is_ready, parent_object_map);
-			p_ob_3->SetParent(parent_object_map.find(parent_name)->second);
-		}
-		if (class_type == 4)
-		{
-			Base_N1* p_ob_4 = new Derived_N4(c_name, is_ready, parent_object_map);
-			p_ob_4->SetParent(parent_object_map.find(parent_name)->second);
-		}
+		else
+			gocCay->FindObjAndAddTree(nameP, nameD, _isReady, numclass);
+		
 	}
-}
-
-int Application::AllInOne()
-{
-	ShowObjState();
-	return 0;
+	cout << "Test result" << endl;
+	cout << "The object " << gocCay->getName() << " is ready";
+	gocCay->output();
 }
 
 Application::~Application()
 {
-	for (it = ListObj.begin(); it != ListObj.end(); it++)
-	{
-		delete* (it);
-	}
-	ListObj.clear();
+	
 }
 
-int main() {
-	Application app(NULL);
-	app.CreTree();
-	return app.AllInOne();
+int main()
+{
+	Application app;
+	app.runApp();
+	return 0;
 }

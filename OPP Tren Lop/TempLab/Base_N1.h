@@ -1,29 +1,25 @@
-#ifndef base_n1_h
-#define base_n1_h
+#ifndef Base_N1_H
+#define Base_N1_H
 #include <iostream>
-#include <iomanip>
+#include <string>
 #include <vector>
-
-
-#define SIGNAL (Base_N1* signal_trans, Base_N1* signal_rec)
-#define HENDLER (Base_N1* signaling, string content_trans)
-#define OBJECT (vector<Base_N1*> listObj, string signal)
 
 using namespace std;
 
-class Base_N1 {
-protected:
-	string NAME;
-	Base_N1* PARENT;
-	int ACT;
+class Base_N1
+{
 public:
-	vector<Base_N1*> ListObj;
-	Base_N1() {}
-	Base_N1(string name, Base_N1* parent, int act);
-	string GetName();
-	int GetAct();
-	void InOutTree(vector<Base_N1*>& listObj);
-	void OutProcess(int times);
-	void PrintTree();
+	vector<Base_N1*> listChild;
+	Base_N1(string _name, Base_N1* _parent, int _isReady);
+	string getName();
+	void setName(string _name);
+	int getReady();
+	void output();
+
+	~Base_N1();
+protected:
+	string name;
+	Base_N1* parent;
+	int isReady;
 };
 #endif

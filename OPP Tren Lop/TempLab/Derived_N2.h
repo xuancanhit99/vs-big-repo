@@ -1,8 +1,10 @@
-#ifndef derived_n2_h
-#define derived_n2_h
+#ifndef Derived_N2_H
+#define Derived_N2_H
 #include "Base_N1.h"
-class Derived_N2 :public Base_N1 {
+
+class Derived_N2 : public Base_N1
+{
 public:
-	Derived_N2(string name, Base_N1* parent, int act) : Base_N1(name, parent, act) {}
+	Derived_N2(string _name, Base_N1* _parent, int _isReady) : Base_N1(_name, _parent, _isReady) {}
 };
 #endif

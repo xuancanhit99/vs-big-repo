@@ -3,7 +3,8 @@
 #define maska 0x1F
 #define BITSPEWORD 32
 #define SHIFT 5
-#define N 10000000
+#define N 10000
+//000
 using namespace std;
 
 unsigned int a[1 + N / BITSPEWORD];

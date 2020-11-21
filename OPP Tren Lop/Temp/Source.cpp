@@ -128,8 +128,7 @@ void Application::runApp()
 	string nameP, nameD;
 	string r;
 	cin >> r;
-	Base_N1 root(r, 0, 1);
-	Base_N1* gocCay = &root;
+	Base_N1* root = new Base_N1(r, 0, 1);
 	Derived_N2* der2;
 	Derived_N3* der3;
 	Derived_N4* der4;
@@ -145,27 +144,27 @@ void Application::runApp()
 		if (nameP == r) {
 			if (numclass == 2)
 			{
-				der2 = new Derived_N2(nameD, gocCay, _isReady);
-				gocCay->listChild.push_back(der2);
+				der2 = new Derived_N2(nameD, root, _isReady);
+				root->listChild.push_back(der2);
 			}
 			else if (numclass == 3)
 			{
-				der3 = new Derived_N3(nameD, gocCay, _isReady);
-				gocCay->listChild.push_back(der3);
+				der3 = new Derived_N3(nameD, root, _isReady);
+				root->listChild.push_back(der3);
 			}
 			else if (numclass == 4)
 			{
-				der4 = new Derived_N4(nameD, gocCay, _isReady);
-				gocCay->listChild.push_back(der4);
+				der4 = new Derived_N4(nameD, root, _isReady);
+				root->listChild.push_back(der4);
 			}
 		}
 		else
-			gocCay->FindObjAndAddTree(nameP, nameD, _isReady, numclass);
+			root->FindObjAndAddTree(nameP, nameD, _isReady, numclass);
 		
 	}
 	cout << "Test result" << endl;
-	cout << "The object " << gocCay->getName() << " is ready";
-	gocCay->output();
+	cout << "The object " << root->getName() << " is ready";
+	root->output();
 }
 
 Application::~Application()

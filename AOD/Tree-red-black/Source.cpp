@@ -523,3 +523,14 @@ int main() {
     tree.printLevelOrder();
     return 0;
 }
+
+//Inorder:
+//2 3 6 7 8 10 11 13 18 22 26
+//Level order :
+//10 7 18 3 8 11 22 2 6 13 26
+//
+//Deleting 18, 11, 3, 10, 22
+//Inorder :
+//    2 6 7 8 13 26
+//    Level order :
+//13 7 26 6 8 2

@@ -360,6 +360,7 @@ int main()
         cout << "3. Search element in tree." << endl;
         cout << "4. Remove the element from the tree." << endl;
         cout << "5. Delete all data and trees." << endl;
+        cout << "6. Exit." << endl;
         cout << "Please choose: "; cin >> choose;
         switch (choose) {
         case 1:
@@ -410,13 +411,17 @@ int main()
             delete root;
             root = NULL;
             break;
+        case 6:
+            return 1;
         default:
             cout << "You enter wrong! Please try again." << endl;
             break;
         }
-        char c;
-        cout << "Do you want continue(y/n): "; cin >> c; cout << endl;
-        if (c == 'n' || c == 'N') break;
     }
     return 0;
 }
+//202000000019 Motorcycle Robert
+//202000000027 Watership RichardAdams
+//202000000036 Lecture TheLast
+//202000000010 History Bryson
+//202000000064

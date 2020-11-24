@@ -57,7 +57,7 @@ void init_grid(void)
 	grid[Y][X] = '+';
 }
 
-
+//
 void show_grid(void)
 {
 	int x, y;

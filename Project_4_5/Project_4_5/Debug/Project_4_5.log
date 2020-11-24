@@ -1,7 +1,1 @@
-﻿  Source.cpp
-C:\Users\daota\source\repos\Project_4_5\Project_4_5\Source.cpp(24,19): warning C4305:  '=': truncation from 'double' to 'float'
-C:\Users\daota\source\repos\Project_4_5\Project_4_5\Source.cpp(24,43): warning C4305:  '+=': truncation from 'double' to 'float'
-C:\Users\daota\source\repos\Project_4_5\Project_4_5\Source.cpp(26,10): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\daota\source\repos\Project_4_5\Project_4_5\Source.cpp(27,28): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\daota\source\repos\Project_4_5\Project_4_5\Source.cpp(27,13): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
-  Project_4_5.vcxproj -> C:\Users\daota\source\repos\Project_4_5\Debug\Project_4_5.exe
+﻿  Project_4_5.vcxproj -> C:\Users\XuanCanh\source\repos\Project_4_5\Debug\Project_4_5.exe

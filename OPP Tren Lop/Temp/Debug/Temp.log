@@ -1,4 +1,4 @@
 ﻿  Source.cpp
-C:\Users\XuanCanh\source\repos\OPP Tren Lop\Temp\Source.cpp(78,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\XuanCanh\source\repos\OPP Tren Lop\Temp\Source.cpp(104,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\XuanCanh\source\repos\OPP Tren Lop\Temp\Source.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\XuanCanh\source\repos\OPP Tren Lop\Temp\Source.cpp(118,20): warning C4018: '<': signed/unsigned mismatch
   Temp.vcxproj -> C:\Users\XuanCanh\source\repos\OPP Tren Lop\Debug\Temp.exe

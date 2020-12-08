@@ -13,7 +13,6 @@ void InputMatrix(double a[][MAX], int x, int y) {
 	}
 }
 
-
 void OutputMatrix(double a[][MAX], int x, int y) {
 	int i, j;
 	for (i = 0; i < x; i++) {

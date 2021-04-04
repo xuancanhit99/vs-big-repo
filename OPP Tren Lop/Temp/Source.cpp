@@ -1,150 +1,87 @@
 #include <iostream> 
-#include <string> 
-#include <map>
-#include <vector>
-
+#include <time.h>
 using namespace std;
 
-class Base_N1
-{
-public:
 
-	vector<Base_N1*> listChild;
-	Base_N1(){}
-	Base_N1(string _name, Base_N1* _parent, int _isReady);
-	string getName();
-	void setName(string _name);
-	int getReady();
-	void output();
-	void TheFirstChild(string first, string second, int _isReady, int numclass);
-	void FindObjAndAddTree(string first, string second, int _isReady, int numclass);
-	~Base_N1();
-protected:
-	string name;
-	Base_N1* parent;
-	int isReady;
-};
-
-
-class Derived_N2 : public Base_N1
-{
-public:
-	Derived_N2(string _name, Base_N1* _parent, int _isReady) : Base_N1(_name, _parent, _isReady) {}
-};
-
-class Derived_N3 : public Base_N1
-{
-public:
-	Derived_N3(string _name, Base_N1* _parent, int _isReady) : Base_N1(_name, _parent, _isReady) {}
-};
-
-
-class Derived_N4 : public Base_N1
-{
-public:
-	Derived_N4(string _name, Base_N1* _parent, int _isReady) : Base_N1(_name, _parent, _isReady) {}
-};
-
-
-
-Base_N1::Base_N1(string _name, Base_N1* _parent, int _isReady)
-{
-	name = _name;
-	parent = _parent;
-	isReady = _isReady;
-}
-
-string Base_N1::getName()
-{
-	return name;
-}
-
-void Base_N1::setName(string _name)
-{
-	name = _name;
-}
-
-int Base_N1::getReady()
-{
-	return isReady;
-}
-
-void Base_N1::output()
-{
-	for (int i = 0; i < listChild.size(); i++)
-	{
-		if (listChild[i]->getReady() > 0)
-		{
-			cout << endl << "The object " << listChild[i]->getName() << " is ready";
-			listChild[i]->output();
-		}
-		else if (listChild[i]->getReady() <= 0)
-		{
-			cout << endl << "The object " << listChild[i]->getName() << " is not ready";
-			listChild[i]->output();
-		}
+void Input(int a[], int n) {
+	cout << "Enter n: "; cin >> n;
+	for (int i = 1; i <= n; i++) {
+		cout << "a[" << i << "]: "; cin >> a[i];
 	}
 }
 
-Base_N1::~Base_N1()
-{
-	delete parent;
-	listChild.clear();
+void Output(int a[], int n) {
+	for (int i = 1; i <= n; i++) {
+		cout << a[i] << " ";
+	}
+	cout << endl;
 }
 
-void Base_N1::TheFirstChild(string first, string second, int _isReady, int numclass) {
-	Base_N1* der;
-	if (numclass == 2)
-		der = new Derived_N2(second, this, _isReady);
-	else if (numclass == 3)
-		der = new Derived_N3(second, this, _isReady);
-	else if (numclass == 4)
-		der = new Derived_N4(second, this, _isReady);
-	this->listChild.push_back(der);
-
-}
-
-
-void Base_N1::FindObjAndAddTree(string first, string second, int _isReady, int numclass) {
-	Base_N1* der;
-	for (int i = 0; i < listChild.size(); i++) {
-		if (first == listChild[i]->getName()) {
-			if (numclass == 2)
-				der = new Derived_N2(second, listChild[i], _isReady);
-			else if (numclass == 3)
-				der = new Derived_N3(second, listChild[i], _isReady);
-			else if (numclass == 4)
-				der = new Derived_N4(second, listChild[i], _isReady);
-			listChild[i]->listChild.push_back(der);
+//1.3
+//algorithm 1
+int delFirstMetod1(int x[], int& n, int key) {
+	int i = 1;
+	int count = 0;
+	while (i <= n) {
+		if (x[i] == key) {
+			count++;
+			for (int j = i; j < n; j++)
+				x[j] = x[j + 1];
+			n = n - 1;
 		}
-		listChild[i]->FindObjAndAddTree(first, second, _isReady, numclass);
+		else
+			i++;
+		cout << "=> "; Output(x, n);
+	}
+	return count;
+}
+
+
+//algorithm 2
+int delFirstMetod2(int x[], int& n, int key) {
+	int j = 1;
+	int count = 0;
+	for (int i = 1; i <= n; i++) {
+		x[j] = x[i];
+		if (x[i] != key) {
+			count++;
+			j++;
+		}
+		cout << "=> ";  Output(x, n);
+	}
+	n = j-1;
+	return count;
+}
+
+int random(int minN, int maxN) {
+	return minN + rand() % (maxN + 1 - minN);
+}
+
+void InputRandom(int a[], int n) {
+	cout << "Enter n: "; cin >> n;
+	for (int i = 1; i <= n; i++) {
+		a[i] = random(1, 100);
 	}
 }
-
 
 int main()
 {
-	Base_N1 
-	string first, second;
-	string r; cin >> r;
-	Base_N1* root = new Base_N1(r, 0, 1);
-	int _isReady, numclass;
-	while (1)
-	{
-	in:
-		cin >> first;
-		if (first == "endtree")
-			break;
-		cin >> second >> numclass >> _isReady;
-		if (second == first) goto in;
-		if (first == r)
-			root->TheFirstChild(first, second, _isReady, numclass);
-		else
-			root->FindObjAndAddTree(first, second, _isReady, numclass);
+	
+	int n1 = 10;
+	int n2 = 100;
+	int a1[11], a2[101];
 
-	}
-	cout << "Test result" << endl;
-	cout << "The object " << root->getName() << " is ready";
-	root->output();
+	//1.3
+	cout << "Array input: ";
+	Input(a1, n1);
+
+	cout << "Number of comparisons: " << delFirstMetod1(a1, n1, 2) << endl;
+	cout << "Number of comparisons:" << delFirstMetod2(a1, n1, 2) << endl;
+	delFirstMetod2(a1, n1, 2);
+	cout << "Array output: "; Output(a1, n1);
+
+	//1.4
+	InputRandom(a1, n1);
+	Output(a1, n1);
 	return 0;
 }

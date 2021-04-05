@@ -10,6 +10,7 @@ class Base {
 	Base* PARENT;
 public:
 	Base(){}
+	//Base(Base* parent){}
 	vector<Base*> ListObj;
 	Base(string name, Base* parent);
 	void SetName(string name);

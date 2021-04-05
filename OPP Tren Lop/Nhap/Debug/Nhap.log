@@ -1,9 +1,7 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Nhap.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Application.cpp
-C:\Users\daota\source\repos\xuancanhit99\vs-big-repo\OPP Tren Lop\Nhap\Application.cpp(14,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\daota\source\repos\xuancanhit99\vs-big-repo\OPP Tren Lop\Nhap\Application.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
-  Base.cpp
-C:\Users\daota\source\repos\xuancanhit99\vs-big-repo\OPP Tren Lop\Nhap\Base.cpp(18,20): warning C4018: '<': signed/unsigned mismatch
+  cl_application.cpp
+C:\Users\daota\source\repos\xuancanhit99\vs-big-repo\OPP Tren Lop\Nhap\cl_application.cpp(13,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\daota\source\repos\xuancanhit99\vs-big-repo\OPP Tren Lop\Nhap\cl_application.cpp(30,20): warning C4018: '<': signed/unsigned mismatch
   Source.cpp
   Generating Code...
   Nhap.vcxproj -> C:\Users\daota\source\repos\xuancanhit99\vs-big-repo\OPP Tren Lop\Debug\Bai 4_1_1.exe

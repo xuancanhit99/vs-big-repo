@@ -26,16 +26,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Derived1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Derived2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cl_application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cl_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cl_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cl_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
